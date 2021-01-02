@@ -1,0 +1,15 @@
+diff --git a/sound/usb/Makefile b/sound/usb/Makefile
+index 56031026b113..7621bcaf72b1 100644
+--- a/sound/usb/Makefile
++++ b/sound/usb/Makefile
+@@ -34,3 +34,10 @@ obj-$(CONFIG_SND_USB_US122L) += snd-usbmidi-lib.o
+ 
+ obj-$(CONFIG_SND) += misc/ usx2y/ caiaq/ 6fire/ hiface/ bcd2000/
+ obj-$(CONFIG_SND_USB_LINE6)	+= line6/
++
++all:
++	make -C /lib/modules/$(KVERSION)/build M=$(PWD) modules
++
++clean:
++	make -C /lib/modules/$(KVERSION)/build M=$(PWD) clean
++
