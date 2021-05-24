@@ -1,6 +1,6 @@
 pkgname=scarlett-dkms
 pkgver=1.0.0
-pkgrel=3
+pkgrel=4
 _commit=f496277bd7eb1977135c95ef7ae40b2852f0e263
 pkgdesc="DKMS drivers for Focusrite Scarlett devices."
 arch=('any')
@@ -12,7 +12,7 @@ source=(Makefile.patch
         dkms.conf
         "git://github.com/ricky26/linux.git#commit=$_commit")
 md5sums=('5f318daa945e1a3b15a64e612148b899'
-         '8a9c3667eb345af177bd2964ae3ef0c5'
+         '590c036d473073a66379ff77bc2bf32a'
          'SKIP')
 
 
