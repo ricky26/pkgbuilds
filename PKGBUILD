@@ -12,11 +12,11 @@ source=("git://github.com/ricky26/linux.git#commit=$_commit"
         dkms.conf)
         
 md5sums=('SKIP'
-         '1e34b10d69f0cd255e707192225b5d30')
+         '6830ed974dbc661c32ab39d4d6dfe7e2')
 
 package() {
   mkdir -p "${pkgdir}/usr/src"
-  cp -r "$srcdir/linux/drivers" "${pkgdir}/usr/src/g923-${pkgver}"
+  cp -r "$srcdir/linux" "${pkgdir}/usr/src/g923-${pkgver}"
   install -Dm644 "${srcdir}/dkms.conf" "${pkgdir}/usr/src/g923-${pkgver}/dkms.conf"
 }
 
